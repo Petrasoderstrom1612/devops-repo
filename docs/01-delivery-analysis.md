@@ -1,7 +1,7 @@
-## Värdeflödesanalys
+# Värdeflödesanalys
 
 | Steg | Bearbetningstid | Väntetid |
-|---|---:|---:|
+| --- | ---: | ---: |
 | Utveckling | 3 d | 0 d |
 | Granskning | 20 min (0,04 d) | 4 d |
 | Bygge för hand | 45 min (0,09 d) | 0 d |
@@ -16,7 +16,7 @@
 
 Och det är innan omtagen. 40 procent av ändringarna går tillbaka från test, vilket för dem lägger på ytterligare ett varv genom utveckling, granskningskö och testmiljökö.
 
-### De tre största väntetiderna
+## De tre största väntetiderna
 
 1. **Releasefönstret – 11 dagar**  
    Nästan halva ledtiden, och ingen arbetar under tiden.
@@ -30,7 +30,7 @@ Och det är innan omtagen. 40 procent av ändringarna går tillbaka från test, 
 ## DORA-måtten
 
 | Mått | Värde | Hur det räknas fram |
-|---|---:|---|
+| --- | ---: | --- |
 | Driftsättningsfrekvens | 12 per år | Ett releasefönster i månaden |
 | Tid från ändring till drift | ungefär 21 arbetsdagar | Från att pull requesten öppnas, alltså den totala ledtiden minus de 3 dagarnas utveckling: 23,6 − 3 ≈ 20,6 |
 | Andel misslyckade ändringar | ungefär 25 procent | Var fjärde release kräver åtgärd dagen efter |
