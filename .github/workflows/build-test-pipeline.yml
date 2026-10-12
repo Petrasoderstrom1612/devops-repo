@@ -6,6 +6,9 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
+      - name: Check Out the Code
+        uses: actions/checkout@v7
+      
       - name: Say Hello
         run: echo "Hello from the pipeline"
 
