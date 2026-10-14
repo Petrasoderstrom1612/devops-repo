@@ -1,6 +1,6 @@
 name: Build and Test Pipeline
 
-on: 
+on:
   push:
     branches: [main]
   pull_request:
@@ -12,12 +12,14 @@ jobs:
     steps:
       - name: Check Out the Code
         uses: actions/checkout@v7
-      
-      - name: Say Hello
-        run: echo "Hello from the pipeline"
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "24"
 
       - name: Run the Build Script
         run: ./scripts/build.sh
-      
+
       - name: Run the Test Script
         run: ./scripts/test.sh
