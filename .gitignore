@@ -12,6 +12,7 @@ desktop.ini
 *.db
 *.db-shm
 *.db-wal
+node_modules/
 
 # Build output: the deployment zip (module 04) and anything else a build makes.
 # Kept in one folder, so the repo's root stays clean, and never committed.
