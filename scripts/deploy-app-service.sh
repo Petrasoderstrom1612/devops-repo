@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 # Packages the latest commit of Waypoint and deploys it to App Service.
 # Usage: ./scripts/deploy-app-service.sh app-waypoint-name rg-waypoint-name
