@@ -1,6 +1,7 @@
 name: Infra and Deploy Pipeline
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths-ignore:
@@ -32,8 +33,6 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy the Infrastructure
-        env:
-          SQL_ADMIN_PASSWORD: ${{ secrets.SQL_ADMIN_PASSWORD }}
         run: |
           az deployment group create \
             --resource-group "$AZURE_RESOURCE_GROUP" \
