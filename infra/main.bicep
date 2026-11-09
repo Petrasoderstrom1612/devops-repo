@@ -19,6 +19,7 @@ param registryName string
 @description('Name of the Log Analytics workspace.')
 param workspaceName string
 
+
 module appServicePlan 'modules/app-service-plan.bicep' = {
   name: 'app-service-plan'
   params: {
