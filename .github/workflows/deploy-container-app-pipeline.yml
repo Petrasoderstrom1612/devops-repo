@@ -59,6 +59,8 @@ jobs:
           docker push "$REGISTRY/waypoint:$IMAGE_TAG"
 
       - name: Deploy the Infrastructure and the App
+        env:
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
         run: |
           az deployment group create \
             --resource-group "$AZURE_RESOURCE_GROUP" \
